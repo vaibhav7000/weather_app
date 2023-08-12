@@ -1,0 +1,809 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* global */ 
+:root{
+    --colorDark1:#112D4E;
+    --colorDark2:#3F72AF;
+    --colorLight1:#D8E2EF;
+    --colorLight2:#F9F7F7;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    color:var(--colorLight2);
+    background-image: linear-gradient(160deg,#112d4e 0%,#3f72af 100%);
+    overflow: hidden;
+}
+
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.tab-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 5px 8px;
+    letter-spacing: 1.75px;
+}
+
+.current-tab{
+    border-radius: 4px;
+    background-color: rgba(219, 226, 239, 0.5);
+}
+
+.weather-container{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    margin-block: 4rem;
+}
+
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.grant-location-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+/* .grant-location-container.active{
+    display: flex;
+} */
+
+.grant-location-container img{
+    margin-bottom: 2rem;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+.btn{
+    all: unset;
+    background-color: var(--colorDark2);
+    color: var(--colorLight2);
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 10px 30px;
+    border: 0px;
+}
+
+.loading-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.loading-container p{
+    text-transform: uppercase;
+}
+
+/* .loading-container.active{
+    display: flex;
+} */
+
+.user-info-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+/* .user-info-container.active{
+    display: flex;
+} */
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.name p:first-of-type{
+    font-size: 2rem;
+}
+
+.name img{
+    width: 30px;
+    height: 30px;
+}
+
+.user-info-container p:first-of-type{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.weather-des{
+    height: 90px;
+    width: 90px;
+}
+
+.user-info-container p[data-temp]{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.paremeter-container{
+    width: 90%;
+    display: flex;
+    gap: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.parameter{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 30%;
+    max-width: 200px;
+}
+
+.parameter img{
+    height: 50px;
+    width: 50px;
+}
+
+.weather-parameter{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    flex-direction: row;
+    gap: 0 10px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.form-container input:first-of-type{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.form-container input:focus{
+    outline:3px solid rgba(255, 225, 225, 0.7);
+}
+
+.form-container input::placeholder{
+    color: rgba(255, 225, 225, 0.7);
+}
+
+.form-container button{
+    padding: unset;
+    /* padding: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.not-found{
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.active{
+    display: flex;
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const usertab=document.querySelector("[data-userWeather]");
+
+// const searchtab=document.querySelector("[data-searchWeather]");
+
+// const usercontainer=document.querySelector(".weather-container");
+
+// const grantaccess=document.querySelector(".grant-location");
+
+// const searchform=document.querySelector(".form-container");
+
+// const loadingscreen=document.querySelector(".loading-container");
+
+// const showeather=document.querySelector(".user-info-container");
+
+// const cityname= document.querySelector("[data-cityname]");
+
+// const countaryicon= document.querySelector("[data-country-icon]");
+
+// const weatherdesc=document.querySelector("[data-weatherdesc]");
+
+// const weathericon=document.querySelector("[data-weathericon]");
+
+// const temperature=document.querySelector("[data-temp]");
+
+// const windspeed=document.querySelector("[data-windspeed]");
+
+// const humidity=document.querySelector("[data-humidity]");
+
+// const cloud=document.querySelector("[data-cloudiness]");
+
+// const API_KEY="d1845658f92b31c64bd94f06f7188c9c";
+
+// // by default the application will open on the user tab means your weather app
+
+// let currenttab=usertab;
+
+// function switchTab(clickedTab){
+
+//     // here this will help to switch between the search tab and current tab
+//     if(currenttab!=clickedTab){
+//         currenttab.classList.remove("current-tab");
+//         clickedTab.classList.add("current-tab");
+//         currenttab=clickedTab;
+
+//         if(!searchform.classList.contains("active")){
+//             searchform.classList.add("active");
+
+//             grantaccess.classList.remove("active");
+//             // grantaccess.classList.add("");
+
+//             showeather.classList.remove("active");
+//             // showeather.classList.remove("");
+//         }
+//         else{
+//             // means we are in the your weather tab so we will display
+//             // the current locaiton weather if we have access to the client
+//             // location if we have not access to that we will show tab (grant location)
+//             searchform.classList.remove("active");
+//             showeather.classList.remove("active");
+//             // this function description is above
+//             getfromSessionStorage();
+//         }
+//     }
+//     else{
+//         return ;
+//     }
+
+// };
+
+// function getfromSessionStorage(){
+//     // here user coordinates will be string which will be in format like the js object
+//     const localCoordinates=sessionStorage.getItem("user-coordinates");
+// // if not found
+//     if(!localCoordinates){
+//         grantaccess.classList.add("active");
+//     }
+//     else{
+//         // here the coordinates is converted in javascript object notation before the conversion coordinates will be string
+//         const coordinates=JSON.parse(coordinates);
+//         fetchUserWeatherInfo();
+//     }
+// };
+
+// async function fetchUserWeatherInfo(coordinates){
+//     const {lat ,long}=coordinates;
+
+//     // here supposed if first the grant location tab is seen but as we
+//     // give the coordinates => remove the grant access tab show loader
+
+//     grantaccess.classList.remove("active");
+//     loadingscreen.classList.add("active");
+
+//     try {
+//         const response=fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={API key}");
+
+//         const data= await response.json();
+
+//         loadingscreen.classList.remove("active");
+
+//         showeather.classList.add("active");
+
+//         renderWeatherInfo(data);
+//     } 
+//     catch (error) {
+//         loadingscreen.classList.remove('active');    
+//     }
+// };
+// // this function will update weather info  for the current location
+// function renderWeatherInfo(weatherInfo){
+
+// }
+
+
+
+// currenttab.classList.add("current-tab");
+
+// usertab.addEventListener("click",()=>{
+//     switchTab(usertab);
+// });
+
+// searchtab.addEventListener("click",()=>{
+//     switchTab(searchtab);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log("hello");
+
+// let apiKey="";
+
+// async function weather(){
+
+//     let city="amritsar";
+
+//     // always put the api call in try and catch block
+//     try{
+//         let response=await fetch("https://api.open-meteo.com/v1/forecast?latitude=31.6340&longitude=74.8723&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m");
+
+//         let data=await response.json();
+// // not good practice to do
+//          let temperature=data.current_weather.temperature;
+//         console.log(data);
+
+//         let newpara=document.createElement('p');
+//         newpara.innerHTML=temperature;
+        
+//         console.log(newpara);
+
+//         document.body.appendChild(newpara);
+
+//         console.log("kya hal");
+//     }
+//     catch(e){
+//         console.log("failed to bring the data");
+//     }
+// }
+
+// weather();
+
+// console.log("new call");
+
+// async function getWeather(){
+    
+//     try {
+//         let response= await fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m");
+
+//         let data= await response.json();
+//     } catch (error) {
+//         console.log("error found");
+//     }
+// }
+
+// function getLocation(){
+//     if(navigator.geolocation){
+//         let curr=navigator.geolocation.getCurrentPosition();
+//         console.log(curr);
+//     }
+//     else{
+//         console.log("no location feature");
+//     }
+// }
+
+
+
+*/
+
+
+
+/*
+<div id="wrapper">
+        <!-- top heading -->
+        <h1>Weather App</h1>
+
+        <!-- tab div -->
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <!-- this single div contains 4 different tabs but show one at a time -->
+        <div class="weather-container">
+
+            <!-- grant location tab -->
+            <div class="grant-location">
+                <img src="./location.png" width="80px" height="80px" loading="lazy" alt="">
+
+                <h2>Grant location Access</h2>
+
+                <p>Allow Access to get weather location</p>
+
+                <button class="btn" data-grantaccess>Grant Access </button>
+            </div>
+
+            <!-- search form for location when clicked on search tab this will appear -->
+            <form class="form-container">
+                
+                <input type="text" placeholder="Search for City..." data-searchInput>
+
+                <button class="btn" >
+                    <img src="./search.png" loading="lazy" height="20px" width="20px" alt="">
+                </button>
+
+            </form>
+
+            <!-- loading tab -->
+            <div class="loading-container">
+                <img src="./loading.gif" height="150px" width="150px" alt="">
+
+                <div>loading</div>
+
+            </div>
+
+            <!-- current location weather or search location weather  -->
+            <div class="user-info-container">
+
+                <!-- city name and flag -->
+                <div class="name">
+
+                    </div data-cityname><div>
+
+                    <img data-country-icon>
+
+                </div>
+
+
+                <p data-weatherdesc></p>
+                <!--  -->
+                <img data-weathericon>
+
+                <div data-temp></div>
+
+                <div class="parameter-container">
+
+                    <div class="parameter">
+                        <img src="./wind.png" alt="">
+
+                        <p>WindSpeed</p>
+
+                        <!-- this will contain the wind speed acc to the location so dynamic -->
+                        <p data-windspeed></p>
+                    </div>
+
+                    <div class="parameter">
+                        <img src="./humidity.png" alt="">
+
+                        <p>humidity</p>
+<!-- this will contain the humidity of the search /current location -->
+                        <p data-humidity></p>
+                    </div>
+
+                    <div class="parameter">
+                        <img src="./cloud.png" alt="">
+
+                        <p>cloud</p>
+
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="index.js"></script>
+*/
